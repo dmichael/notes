@@ -89,13 +89,13 @@ Preorder Traversal
 ------------------
 Informally, a preorder traversal involves walking around the tree in a counterclockwise mannert starting at the root, sticking close to the edges , and printing out the nodes as you encounter them. Perform a preorder traversal of a binary search tree, printing the value of each node.
 
-class Node
-  def preorder_traversal
-    puts key
-    left.preorder_traveral
-    right.preorder_traveral
-  end
-end
+    class Node
+      def preorder_traversal
+        puts key
+        left.preorder_traveral
+        right.preorder_traveral
+      end
+    end
 
 Preorder Traversal, No Recusion
 -------------------------------
