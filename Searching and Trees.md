@@ -12,8 +12,32 @@ The text Algorithms in a Nutshell has a great review of the basic algorithms for
 Sequential Search
 -----------------
 
+As the name implies this is the simplest search method. Given a collection of items, visit each of them in order until the one you are looking for is found. Best used when the list is very short.
+
+* Best Case: _O(1)_
+* Average Case: _O(n)_
+* Worse Case: _O(n)_
+
 Binary Search
 -------------
+
+The elements involved in the query should be sorted first (see sorting!). Divides the collection in half until the item is found.
+
+    def binary_search collection, key
+      low, high = 0, collection.size - 1
+      
+      while low <= high do
+        index = (low + high)/2
+        item  = collection[i]
+        return true if key == item
+
+        if key < item
+          high = index - 1
+        else
+          low  = index + 1
+        end
+      end
+    end
 
 Hash-based Search
 -----------------
