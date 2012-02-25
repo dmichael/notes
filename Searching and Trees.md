@@ -27,6 +27,8 @@ The elements involved in the query should be sorted first (see sorting!). Divide
 * Average Case: _O(log n)_
 * Worse Case: _O(log n)_
 
+Here is a sample implementation 
+
     # binary search
     def has_item? collection, key
       low, high = 0, collection.size - 1
@@ -39,7 +41,7 @@ The elements involved in the query should be sorted first (see sorting!). Divide
         high = index - 1 if key < item
         low  = index + 1 if key > item
       end
-      
+
       false
     end
 
