@@ -50,4 +50,4 @@ The find method is O(log(n))
 
 In most applications we need to balance the tree for efficient lookup. A ree with approximatel the same number of nodes on each side is called a _balanced tree_. Of the methods to gaurantee that a tree is balanced, a red-black tree is the most common.
 
-*Red-black trees*
+**Red-black trees**
