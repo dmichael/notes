@@ -1,3 +1,5 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-beta/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 Searching and Trees
 ===================
 
@@ -23,11 +25,19 @@ In a _binary tree_, each node has no more than two children, commonly referred t
 In Ruby, one way this could look is
 
     class Node
-      attr_accessor :left, :right, :value
+      attr_accessor :key, :left, :right
 
-      def initialize(left, right, value)
-        @left, @right, @value = left, right, value
+      def initialize(value, left, right)
+        @key, @left, @right = key, left, right
+      end
+
+      # We are assuming that this is the root.
+      def find(key)
+        return @key if key == @key
+        (@key < key) ? right.find(key) : left.find(key)
       end
     end
 
 Don't you just love Ruby.
+
+The find method is $$O(log(n))$$
