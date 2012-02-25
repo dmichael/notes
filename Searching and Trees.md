@@ -53,6 +53,7 @@ In most applications we need to balance the tree for efficient lookup. A ree wit
 **Red-black trees**
 
 Features
+
 * Every node is labeled either red or black
 * The root is black
 * Every leaf node contains a null value and is black
