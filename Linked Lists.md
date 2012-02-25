@@ -1,12 +1,11 @@
-In an effort to improve my interview questions and to review my own knowledge of the basics, I have started studying basic data structures and algorithms. I have actually done this every few years or so just keep it fresh. Since I use lists and their variants everyday, I thought this might be a good place to start the review.
+Linked Lists
+============
 
 The interesting thing about linked lists, is that for 99% of programmers, the last time they saw this structure was during study or in preparation for an interview.
 I asked a colleague the last time he saw this structure in its primitive form and he said when he worked in C and he had to do everything himself. Thankfully, there are all sorts of data structures whose implementations we take for granted these days. Imagine if every you wanted to make breakfast you had to gather eggs from the chicken, harvest wheat and leven up some bread, milk the cow and churn some butter, grow, roast, and grind the beans... you get the idea.
 
 Let's make breakfast
 
-Linked Lists
-============
 
 Singly Linked Lists
 -------------------

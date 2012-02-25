@@ -1,7 +1,7 @@
 Searching and Trees
 ===================
 
-The text Algorithms in a Nutshell has a great review of the basic algorithms for search. As it says in the text, given a collection C  of elements, there are really 3 fundamental queries we might ask.
+The text Algorithms in a Nutshell has a great review of the basic algorithms for search. As it says in the text, given a collection C  of elements, there are really 3 fundamental queries we might ask. (page 105)
 
 * Existence: Does _C_ contain a target element _t_?
 * Retreival: Return the eloement in _C_ that matches the target element _t_
