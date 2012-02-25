@@ -23,7 +23,12 @@ Binary Search
 
 The elements involved in the query should be sorted first (see sorting!). Divides the collection in half until the item is found.
 
-    def binary_search collection, key
+* Best Case: _O(1)_
+* Average Case: _O(log n)_
+* Worse Case: _O(log n)_
+
+    # binary search
+    def has_item? collection, key
       low, high = 0, collection.size - 1
       
       while low <= high do
@@ -31,12 +36,11 @@ The elements involved in the query should be sorted first (see sorting!). Divide
         item  = collection[i]
         return true if key == item
 
-        if key < item
-          high = index - 1
-        else
-          low  = index + 1
-        end
+        high = index - 1 if key < item
+        low  = index + 1 if key > item
       end
+      
+      false
     end
 
 Hash-based Search
