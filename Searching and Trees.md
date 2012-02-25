@@ -69,6 +69,19 @@ Hash-based Search
 
 For searching large collections that are not necessarily ordered, a Hash is used. In high level languages like Ruby or Scala (or even Java), the Hash or HashMap is so deeply embedded in the day to day use of the language that we hardly ever think about the underlying data structure.
 
+<table>
+  <tr>
+    <td>Best Case</td>
+    <td>Average Case</td>
+    <td>Worse Case</td>
+  </tr>
+  <tr>
+    <td>O(1)</td>
+    <td>O(1)</td>
+    <td>O(log n)</td>
+  </tr>
+</table>
+
 Binary Search Trees
 -------------------
 
@@ -155,3 +168,37 @@ Perform a preorder traversal of a binary search tree, printing the value of each
 Lowest Common Ancestor
 ----------------------
 Given the value of two nodes in a binary search tree, find the lowest (nearest) common ancestor. You may assume that both values already exist in the tree.
+
+Type-ahead or Autocomplete
+--------------------------
+Implement an autocomplete that suggests words as the user types letters.
+
+One way to do this is with a _trie_. A trie, or prefix tree, is an ordered tree data structure that is used to store an associative array where the keys are usually strings. This is [a trie](http://en.wikipedia.org/wiki/Trie).
+
+    class Trie
+      def initialize
+        @root = {}
+      end
+      
+      def build word
+        node = @root    
+
+        word.each_char {|char|
+          prev_node = node
+          node      = node[char]
+          if node.nil?
+            prev_node[char] = {}
+            node = prev_node[char]
+          end
+        }
+      end
+     
+      def find(str) 
+        node = @root
+        str.each_char { |char|
+          node = node[char]
+          return false if node.nil?
+        }
+        return true 
+      end
+    end
