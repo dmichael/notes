@@ -59,3 +59,48 @@ Features
 * Every leaf node contains a null value and is black
 * All red nodes have two children
 * Every simple path from a node to one of its decendent lead nodes contains the same number of black nodes
+
+Four steps in inserting a new key into a red-black tree
+
+1. Insert new Leaf node
+2. Update colors of ancestor nodes
+3. Rotate right to maintain red-black tree property
+4. Update colors of affected nodes
+
+Searches
+========
+
+Breadth-First Search
+--------------------
+
+Start with the root, move left to right across the second level, then move left to right across the third level, and so on. The time to find a node is _O(n)_, so this type of search is best avoided for large trees.
+
+Traversals
+----------
+
+* **Preorder** traversal of a node performs the operation first on the node itself, then on its left decendants, and finally on its right decendants. _O(n)_ complexity
+* **Inorder** traversal performs the operation first on the node's left decendants, then on the node itself, and finally on its right decendents. 
+* **Postorder** traversal performs the operation first on the node's left decendants, then on its right decendents, and finally on the node itself.
+
+Common Binary Tree Problems
+===========================
+
+Preorder Traversal
+------------------
+Informally, a preorder traversal involves walking around the tree in a counterclockwise mannert starting at the root, sticking close to the edges , and printing out the nodes as you encounter them. Perform a preorder traversal of a binary search tree, printing the value of each node.
+
+class Node
+  def preorder_traversal
+    puts key
+    left.preorder_traveral
+    right.preorder_traveral
+  end
+end
+
+Preorder Traversal, No Recusion
+-------------------------------
+Perform a preorder traversal of a binary search tree, printing the value of each node, but this time you may _not_ use recursion.
+
+Lowest Common Ancestor
+----------------------
+Given the value of two nodes in a binary search tree, find the lowest (nearest) common ancestor. You may assume that both values already exist in the tree.
