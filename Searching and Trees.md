@@ -40,4 +40,4 @@ In Ruby, one way this could look is
 
 Don't you just love Ruby.
 
-The find method is $$O(log(n))$$
+The find method is O(log(n))
