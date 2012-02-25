@@ -23,9 +23,18 @@ Binary Search
 
 The elements involved in the query should be sorted first (see sorting!). Divides the collection in half until the item is found.
 
-* Best Case: _O(1)_
-* Average Case: _O(log n)_
-* Worse Case: _O(log n)_
+<table>
+  <tr>
+    <td>Best Case</td>
+    <td>Average Case</td>
+    <td>Worse Case</td>
+  </tr>
+  <tr>
+    <td>_O(1)_</td>
+    <td>_O(log n)_</td>
+    <td>_O(log n)_</td>
+  </tr>
+</table>
 
 Here is a sample implementation 
 
