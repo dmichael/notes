@@ -22,12 +22,12 @@ Binary Trees
 In a _binary tree_, each node has no more than two children, commonly referred to _left_ and _right_.
 In Ruby, one way this could look is
 
-  class Node
-    attr_accessor :left, :right, :value
+    class Node
+      attr_accessor :left, :right, :value
 
-    def initialize(left, right, value)
-      @left, @right, @value = left, right, value
+      def initialize(left, right, value)
+        @left, @right, @value = left, right, value
+      end
     end
-  end
 
 Don't you just love Ruby.
