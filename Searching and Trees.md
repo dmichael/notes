@@ -1,2 +1,8 @@
 Searching and Trees
 ===================
+
+The text Algorithms in a Nutshell has a great review of the basic algorithms for search. As it says in the text, given a collection C  of elements, there are really 3 fundamental queries we might ask.
+
+* Existence: Does _C_ contain a target element _t_?
+* Retreival: Return the eloement in _C_ that matches the target element _t_
+* Associative lookup: Return information associated in collection _C_ with the target key element _k_
