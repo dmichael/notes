@@ -6,3 +6,14 @@ The text Algorithms in a Nutshell has a great review of the basic algorithms for
 * Existence: Does _C_ contain a target element _t_?
 * Retreival: Return the eloement in _C_ that matches the target element _t_
 * Associative lookup: Return information associated in collection _C_ with the target key element _k_
+
+Sequential Search
+-----------------
+
+Binary Search
+-------------
+
+Hash-based Search
+-----------------
+
+![Alt text](http://s3.amazonaws.com/data.tumblr.com/tumblr_lzx9ydTaVb1qz54zio1_1280.jpg "Optional title")
