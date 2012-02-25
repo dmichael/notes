@@ -14,9 +14,18 @@ Sequential Search
 
 As the name implies this is the simplest search method. Given a collection of items, visit each of them in order until the one you are looking for is found. Best used when the list is very short.
 
-* Best Case: _O(1)_
-* Average Case: _O(n)_
-* Worse Case: _O(n)_
+<table>
+  <tr>
+    <td>Best Case</td>
+    <td>Average Case</td>
+    <td>Worse Case</td>
+  </tr>
+  <tr>
+    <td>O(1)</td>
+    <td>O(n)</td>
+    <td>O(n)</td>
+  </tr>
+</table>
 
 Binary Search
 -------------
@@ -30,9 +39,9 @@ The elements involved in the query should be sorted first (see sorting!). Divide
     <td>Worse Case</td>
   </tr>
   <tr>
-    <td>_O(1)_</td>
-    <td>_O(log n)_</td>
-    <td>_O(log n)_</td>
+    <td>O(1)</td>
+    <td>O(log n)</td>
+    <td>O(log n)</td>
   </tr>
 </table>
 
@@ -40,15 +49,16 @@ Here is a sample implementation
 
     # binary search
     def has_item? collection, key
-      low, high = 0, collection.size - 1
-      
+      low  = 0
+      high = collection.size - 1
+
       while low <= high do
-        index = (low + high)/2
+        i = (low + high)/2
         item  = collection[i]
         return true if key == item
 
-        high = index - 1 if key < item
-        low  = index + 1 if key > item
+        high = i - 1 if key < item
+        low  = i + 1 if key > item
       end
 
       false
@@ -56,6 +66,8 @@ Here is a sample implementation
 
 Hash-based Search
 -----------------
+
+For searching large collections that are not necessarily ordered, a Hash is used. In high level languages like Ruby or Scala (or even Java), the Hash or HashMap is so deeply embedded in the day to day use of the language that we hardly ever think about the underlying data structure.
 
 Binary Search Trees
 -------------------
