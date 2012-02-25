@@ -18,8 +18,14 @@ Binary Search
 Hash-based Search
 -----------------
 
-Binary Trees
-------------
+Binary Search Trees
+-------------------
+
+Reasons to use a binary tree
+
+* Data set in dynamic or of unknown size
+* Application requires traversing the data in ascending or decending order
+* Not to be confused with a B-Tree, which is a generalization of a binary search tree in that a node can have more than two children.
 
 In a _binary tree_, each node has no more than two children, commonly referred to _left_ and _right_.
 In Ruby, one way this could look is
@@ -31,13 +37,17 @@ In Ruby, one way this could look is
         @key, @left, @right = key, left, right
       end
 
-      # We are assuming that this is the root.
       def find(key)
         return @key if key == @key
         (@key < key) ? right.find(key) : left.find(key)
       end
     end
 
-Don't you just love Ruby.
+Don't you just love Ruby. 
+Accessing a node is typically done recursively. In the above example, calling #find on the parent node, subsequently calls #find on the children. This is not recursion, though the implementation would be if it was just a function and not an object.
 
 The find method is O(log(n))
+
+In most applications we need to balance the tree for efficient lookup. A ree with approximatel the same number of nodes on each side is called a _balanced tree_. Of the methods to gaurantee that a tree is balanced, a red-black tree is the most common.
+
+*Red-black trees*
