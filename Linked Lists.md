@@ -14,23 +14,23 @@ Singly Linked Lists
 
 Here is an example in C
 
-	typedef struct IntElement {
-	  struct IntElement *next;
-	  int data;
-	} IntElement;
+    typedef struct IntElement {
+      struct IntElement *next;
+      int data;
+    } IntElement;
 
 <br>
 
 And in our favorite language Java (sike)
 
-	public class ListElement {
-	  ListElement next;
-	  Object data;
+    public class ListElement {
+      ListElement next;
+      Object data;
 
-	  public ListElement(Object data){
-	    this.data = data;
-	  }
-	}
+      public ListElement(Object data){
+        this.data = data;
+      }
+    }
 
 Doubly Linked Lists
 -------------------
@@ -54,11 +54,11 @@ Tracking the Head
 
 Here is the Java
 
-	public ListElement insertInFront( ListElement list, Object data){
-	  ListElement l = new ListElement(data);
-	  l.next = list;
-	  return l; // the new head!
-	}
+    public ListElement insertInFront( ListElement list, Object data){
+      ListElement l = new ListElement(data);
+      l.next = list;
+      return l; // the new head!
+    }
 
 Traversing
 ----------
@@ -67,12 +67,12 @@ Traversing
 
 This is easy in most any language (but here is the Java)  
 
-	public ListElement find(ListElement head, Object data){
-	  while(head.data != data && head != null){
-	    head = list.next;
-	  }
-	  return head
-	}
+    public ListElement find(ListElement head, Object data){
+      while(head.data != data && head != null){
+        head = list.next;
+      }
+      return head
+    }
 
 
 Inserting and Deleting Elements
@@ -84,27 +84,27 @@ Below is the C implementation for deleting an element from a linked list. If we 
 
 Here is the C
 
-	bool deleteElement( IntElement **head, IntElement *deleteMe){
-	  IntElement *elem = *head;
+    bool deleteElement( IntElement **head, IntElement *deleteMe){
+      IntElement *elem = *head;
 
-	  // special case for head
-	  if (deleteMe == *head){
-	    *head = elem->next;
-	    delete deleteMe;
-	    return true;
-	  }
+      // special case for head
+      if (deleteMe == *head){
+        *head = elem->next;
+        delete deleteMe;
+        return true;
+      }
 
-	  while(elem){
-	    if(elem->next == deleteMe){
-	      elem->next = deleteMe->next;
-	      delete deleteMe;
-	      return true;
-	    }
-	    elem = elem->next;
-	  }
-	  // not found
-	  return false;
-	}
+      while(elem){
+        if(elem->next == deleteMe){
+          elem->next = deleteMe->next;
+          delete deleteMe;
+          return true;
+        }
+        elem = elem->next;
+      }
+      // not found
+      return false;
+    }
 
 
 
